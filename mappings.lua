@@ -32,9 +32,12 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["H"] = { ":bn<cr>", desc = "Next Buffer" },
+    ["L"] = { ":bN<cr>", desc = "Previous Buffer" },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["<esc><esc>"] = { "<C-\\><C-n>", desc = "Escape Terminal" },
   },
 }
