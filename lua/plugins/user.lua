@@ -114,5 +114,31 @@ return {
     lazy = true,
     event = "BufReadPost",
   },
-  { "lluchs/vim-wren", enabled = true }
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      workspaces = {
+        {
+          name = "personal",
+          path = "~/vaults/personal",
+        },
+        {
+          name = "school",
+          path = "~/vaults/work",
+        },
+        {
+          name = "docs",
+          path = "~/vaults/docs",
+        }
+      },
+    },
+  },
+  { "lluchs/vim-wren", enabled = true },
+  { "GustavEikaas/easy-dotnet.nvim", enabled = true },
 }
