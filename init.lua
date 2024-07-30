@@ -1,15 +1,15 @@
 if vim.g.neovide then
-	vim.o.guifont = "CaskaydiaCove Nerd Font:h16"
-	vim.g.neovide_floating_shadow = true
-	vim.g.neovide_floating_z_height = 10
-	vim.g.neovide_light_angle_degrees = 45
-	vim.g.neovide_light_radius = 5
-	vim.g.neovide_transparency = 0.9
+  vim.o.guifont = "CaskaydiaCove Nerd Font:h14"
+  vim.g.neovide_floating_shadow = true
+  vim.g.neovide_floating_z_height = 10
+  vim.g.neovide_light_angle_degrees = 45
+  vim.g.neovide_light_radius = 5
+  vim.g.neovide_transparency = 0.9
 end
 
 -- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
-local lazypath = vim.env.LAZY or vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable",
@@ -23,9 +23,9 @@ if not pcall(require, "lazy") then
   vim.api.nvim_echo(
   { { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } },
     true, {})
-	vim.fn.getchar()
-	vim.cmd.quit()
+  vim.fn.getchar()
+  vim.cmd.quit()
 end
 
-require("lazy_setup")
-require("polish")
+require "lazy_setup"
+require "polish"

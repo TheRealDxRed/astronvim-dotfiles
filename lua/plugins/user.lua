@@ -135,10 +135,33 @@ return {
         {
           name = "docs",
           path = "~/vaults/docs",
-        }
+        },
+      },
+      ui = {
+        checkboxes = {
+          [" "] = { char = "", hl_group = "ObsidianTodo" },
+          ["x"] = { char = "", hl_group = "ObsidianDone" },
+          [">"] = { char = "", hl_group = "ObsidianRightArrow" },
+          ["~"] = { char = "", hl_group = "ObsidianTilde" },
+          ["!"] = { char = "", hl_group = "ObsidianTilde" },
+        },
+        bullets = { char = "", hl_group = "ObsidianBullet" },
+        extenal_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
       },
     },
   },
   { "lluchs/vim-wren", enabled = true },
   { "GustavEikaas/easy-dotnet.nvim", enabled = true },
+  {
+    "nvim-tree/nvim-web-devicons",
+    opts = function(_, opts)
+      opts.override_by_extension = {
+        ["odin"] = {
+          icon = "󰆥",
+          color = "#18406a",
+          name = "Odin",
+        },
+      }
+    end,
+  },
 }

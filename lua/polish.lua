@@ -15,8 +15,10 @@ vim.filetype.add {
   },
 }
 
-do
-  local pc = require "nvim-treesitter.parsers".get_parser_configs()
+vim.o.conceallevel = 2
+
+do -- TREESITTER POLISH
+  local pc = require("nvim-treesitter.parsers").get_parser_configs()
   pc.wren = {
     install_info = {
       url = "https://git.sr.ht/~jummit/tree-sitter-wren",
