@@ -40,3 +40,8 @@ do -- TREESITTER POLISH
     filetype = "buzz",
   }
 end
+
+vim.o.cmdheight = 1
+
+-- fucking csharpier doesn't work so disable it or i will RIOT
+-- require("null-ls").disable("csharpier")

@@ -1,11 +1,5 @@
--- You can also add or configure plugins by creating files in this `plugins/` folder
--- Here are some examples:
-
 ---@type LazySpec
 return {
-
-  -- == Examples of Adding Plugins ==
-
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
@@ -13,25 +7,28 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- == Examples of Overriding Plugins ==
-
-  -- customize alpha options
   {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "                    .   .xXXXX+.   .                    ",
+        "               .   ..   xXXXX+.-   ..   .               ",
+        "         .   ..  ... ..xXXXX+. --.. ...  ..   .         ",
+        "     .   ..  ... .....xXXXX+.  -.-..... ...  ..   .     ",
+        "   .   ..  ... ......xXXXX+.  . .--...... ...  ..   .   ",
+        "  .   ..  ... ......xXXXX+.    -.- -...... ...  ..   .  ",
+        " .   ..  ... ......xXXXX+.   .-+-.-.-...... ...  ..   . ",
+        " .   ..  ... .....xXXXX+. . --xx+.-.--..... ...  ..   . ",
+        ".   ..  ... .....xXXXX+. - .-xxxx+- .-- .... ...  ..   .",
+        " .   ..  ... ...xXXXX+.  -.-xxxxxx+ .---... ...  ..   . ",
+        " .   ..  ... ..xXXXX+. .---..xxxxxx+-..--.. ...  ..   . ",
+        "  .   ..  ... xXXXX+. . --....xxxxxx+  -.- ...  ..   .  ",
+        "   .   ..  ..xXXXX+. . .-......xxxxxx+-. --..  ..   .   ",
+        "     .   .. xXXXXXXXXXXXXXXXXXXXxxxxxx+. .-- ..   .     ",
+        "         . xXXXXXXXXXXXXXXXXXXXXXxxxxxx+.  -- .         ",
+        "           xxxxxxxxxxxxxxxxxxxxxxxxxxxxx+.--            ",
+        "            xxxxxxxxxxxxxxxxxxxxxxxxxxxxx+-             ",
       }
       return opts
     end,
@@ -81,11 +78,6 @@ return {
     end,
   },
   {
-    "lluchs/vim-wren",
-    ft = { "wren" },
-  },
-  { "ellisonleao/gruvbox.nvim" },
-  {
     "Mythos-404/xmake.nvim",
     branch = "v1",
     lazy = true,
@@ -103,16 +95,6 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
-  },
-  {
-    "tikhomirov/vim-glsl",
-    lazy = true,
-    event = "BufReadPost",
-  },
-  {
-    "Tetralux/odin.vim",
-    lazy = true,
-    event = "BufReadPost",
   },
   {
     "epwalsh/obsidian.nvim",
@@ -150,8 +132,6 @@ return {
       },
     },
   },
-  { "lluchs/vim-wren", enabled = true },
-  { "GustavEikaas/easy-dotnet.nvim", enabled = true },
   {
     "nvim-tree/nvim-web-devicons",
     opts = function(_, opts)
