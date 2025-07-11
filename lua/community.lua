@@ -6,6 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   --{ import = "astrocommunity.pack.cs" },
+  { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.pack.cs-omnisharp" },
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.java" },
@@ -18,6 +19,7 @@ return {
   { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.zig" },
+  { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.recipes.neovide" },
   {
     import = "astrocommunity.colorscheme.kanagawa-nvim",
