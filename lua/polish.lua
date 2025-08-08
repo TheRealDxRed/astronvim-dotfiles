@@ -44,11 +44,11 @@ end
 vim.o.cmdheight = 1
 
 -- fucking csharpier doesn't work so disable it or i will RIOT
--- require("null-ls").disable("csharpier")
+require("null-ls").disable "csharpier"
 
 -- Setup csharp_ls indentation settings
-local lspconfig = require("lspconfig")
-lspconfig.csharp_ls.setup({
+local lspconfig = require "lspconfig"
+lspconfig.csharp_ls.setup {
   settings = {
     editor = {
       tabSize = 2,
@@ -56,4 +56,4 @@ lspconfig.csharp_ls.setup({
       insertSpaces = false,
     },
   },
-})
+}
