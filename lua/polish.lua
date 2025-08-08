@@ -57,3 +57,24 @@ lspconfig.csharp_ls.setup {
     },
   },
 }
+
+-- Override csharpier formatter to use correct arguments so formatting-on-save works
+local null_ls_status, null_ls = pcall(require, "null-ls")
+if null_ls_status then
+  null_ls.register(null_ls.builtins.formatting.csharpier.with({
+    command = "dotnet-csharpier",
+    args = { "--write-stdout", "--no-cache" },
+    filetypes = { "cs" },
+  }))
+end
+
+-- Set buffer-local indentation for C# files (Neovim style)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cs",
+  callback = function()
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.expandtab = false
+  end,
+})
