@@ -5,9 +5,9 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  --{ import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.completion.copilot-lua" },
-  { import = "astrocommunity.pack.cs-omnisharp" },
+  -- { import = "astrocommunity.pack.cs-omnisharp" },
+  { import = "astrocommunity.pack.cs" },
   { import = "astrocommunity.pack.godot" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.json" },
@@ -21,11 +21,6 @@ return {
   { import = "astrocommunity.pack.zig" },
   { import = "astrocommunity.recipes.ai" },
   { import = "astrocommunity.recipes.neovide" },
-  {
-    import = "astrocommunity.colorscheme.kanagawa-nvim",
-    opts = {
-      theme = "dragon",
-    },
-  },
+  { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   -- import/override with your plugins folder
 }
