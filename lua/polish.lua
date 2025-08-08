@@ -63,7 +63,7 @@ local null_ls_status, null_ls = pcall(require, "null-ls")
 if null_ls_status then
   null_ls.register(null_ls.builtins.formatting.csharpier.with {
     command = "dotnet-csharpier",
-    args = { "--write-stdout", "--no-cache" },
+    args = { "pipe-files" },
     filetypes = { "cs" },
   })
 end
