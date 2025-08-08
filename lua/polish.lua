@@ -46,19 +46,7 @@ vim.o.cmdheight = 1
 -- fucking csharpier doesn't work so disable it or i will RIOT
 require("null-ls").disable "csharpier"
 
--- Setup csharp_ls indentation settings
-local lspconfig = require "lspconfig"
-lspconfig.csharp_ls.setup {
-  settings = {
-    editor = {
-      tabSize = 2,
-      indentSize = 2,
-      insertSpaces = false,
-    },
-  },
-}
-
--- Override csharpier formatter to use correct arguments so formatting-on-save works
+-- now re-enable csharpier with the right cli args
 local null_ls_status, null_ls = pcall(require, "null-ls")
 if null_ls_status then
   null_ls.register(null_ls.builtins.formatting.csharpier.with {
