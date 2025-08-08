@@ -44,7 +44,7 @@ end
 vim.o.cmdheight = 1
 
 -- fucking csharpier doesn't work so disable it or i will RIOT
--- require("null-ls").disable "csharpier"
+require("null-ls").disable "csharpier"
 
 -- Setup csharp_ls indentation settings
 local lspconfig = require "lspconfig"
